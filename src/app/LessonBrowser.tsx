@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react'
 import LikeButton from './LikeButton'
 import { slugify } from '@/lib/slugify'
+import Dropdown from './Dropdown'
 
 type Lesson = {
   id: string
@@ -50,9 +51,7 @@ export default function LessonBrowser({ lessons }: { lessons: Lesson[] }) {
     })
   }, [lessons, searchText, companyFilter, stageFilter, showGeneralOnly])
 
-  const selectClass =
-  'w-full p-2.5 text-sm border border-[#E5E5E0] rounded-lg bg-white cursor-pointer hover:border-[#3D5A4C] focus:outline-none focus:border-[#3D5A4C] transition-colors'
-
+  
   return (
     <div className="flex flex-col md:flex-row gap-10 items-start">
       {/* Sidebar */}
@@ -69,37 +68,47 @@ export default function LessonBrowser({ lessons }: { lessons: Lesson[] }) {
           <label className="block text-xs font-semibold uppercase tracking-wide text-[#1A1A1A] mb-1.5">
             Company
           </label>
-          <select
+          <Dropdown
   value={companyFilter}
-  onChange={(e) => setCompanyFilter(e.target.value)}
-  className={selectClass}
->
-  <option value="">All companies</option>
-  <option value="__general__">General</option>
-  {companies.map((c) => (
-    <option key={c} value={c}>{c}</option>
-  ))}
-</select>
+  onChange={setCompanyFilter}
+  options={[
+    { value: '', label: 'All companies' },
+    { value: '__general__', label: 'General' },
+    ...companies.map((c) => ({ value: c, label: c })),
+  ]}
+/>
         </div>
 
         <div className="mb-4">
           <label className="block text-xs font-semibold uppercase tracking-wide text-[#1A1A1A] mb-1.5">
             Stage
           </label>
-          <select
-            value={stageFilter}
-            onChange={(e) => setStageFilter(e.target.value)}
-            className={selectClass}
-          >
-            <option value="">All stages</option>
-            <option value="phone_screen">Phone screen</option>
-            <option value="technical_round">Technical round</option>
-            <option value="final_onsite">Final / onsite</option>
-            <option value="offer_stage">Offer stage</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
+          <Dropdown
+  value={stageFilter}
+  onChange={setStageFilter}
+  options={[
+    { value: '', label: 'All stages' },
+    { value: 'phone_screen', label: 'Phone screen' },
+    { value: 'technical_round', label: 'Technical round' },
+    { value: 'final_onsite', label: 'Final / onsite' },
+    { value: 'offer_stage', label: 'Offer stage' },
+    { value: 'other', label: 'Other' },
+  ]}
+/>
 
+        </div>
+{(companyFilter || stageFilter || searchText) && (
+  <button
+    onClick={() => {
+      setCompanyFilter('')
+      setStageFilter('')
+      setSearchText('')
+    }}
+    className="text-xs text-[#B8845C] hover:text-[#96683F] transition-colors cursor-pointer mt-1"
+  >
+    Clear filters
+  </button>
+)}
       </aside>
 
       {/* Lessons — masonry via CSS columns */}

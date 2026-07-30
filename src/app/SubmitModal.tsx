@@ -14,9 +14,9 @@ export default function SubmitModal({ onClose }: { onClose: () => void }) {
       >
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-semibold text-[#1A1A1A]">Share a lesson</h2>
-          <button onClick={onClose} className="text-[#8A8A85] text-2xl leading-none">
-            &times;
-          </button>
+          <button onClick={onClose} className="text-[#8A8A85] text-2xl leading-none cursor-pointer hover:text-[#1A1A1A] transition-colors">
+  &times;
+</button>
         </div>
         <LessonForm onSuccess={onClose} />
       </div>
