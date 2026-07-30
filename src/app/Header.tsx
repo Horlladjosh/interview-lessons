@@ -16,7 +16,7 @@ export default function Header() {
           </Link>
           <button
             onClick={() => setShowModal(true)}
-            className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-[#E5E5E0] text-[#1A1A1A] cursor-pointer hover:border-[#3D5A4C] hover:text-[#3D5A4C] transition-colors"
+            className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-[#E5E5E0] text-[#1A1A1A] cursor-pointer hover:border-[#C9860A] hover:text-[#C9860A] transition-colors"
           >
             Share a lesson
           </button>

@@ -33,7 +33,7 @@ export default function Dropdown({
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between py-2.5 px-3 text-sm border border-[#E5E5E0] rounded-lg bg-white cursor-pointer hover:border-[#3D5A4C] transition-colors"
+        className="w-full flex items-center justify-between py-2.5 px-3 text-sm border border-[#E5E5E0] rounded-lg bg-white cursor-pointer hover:border-[#C9860A] transition-colors"
       >
         <span className="text-[#1A1A1A]">{selectedLabel}</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8A8A85" strokeWidth="2">
@@ -51,8 +51,8 @@ export default function Dropdown({
                 onChange(opt.value)
                 setOpen(false)
               }}
-              className={`w-full text-left px-3 py-2 text-sm hover:bg-[#3D5A4C]/[0.06] transition-colors ${
-                opt.value === value ? 'text-[#3D5A4C] bg-[#3D5A4C]/[0.06]' : 'text-[#1A1A1A]'
+              className={`w-full text-left px-3 py-2 text-sm hover:bg-[#C9860A]/[0.06] transition-colors ${
+                opt.value === value ? 'text-[#C9860A] bg-[#C9860A]/[0.06]' : 'text-[#1A1A1A]'
               }`}
             >
               {opt.label}

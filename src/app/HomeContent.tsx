@@ -38,7 +38,7 @@ export default function HomeContent({ initialLessons }: { initialLessons: Lesson
     <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tighter mb-8 leading-[0.95]">
       The interview ends,
       <br />
-      <span className="text-[#3D5A4C]">The lesson shouldn't.</span>
+      <span className="text-[#C9860A]">The lesson shouldn't.</span>
     </h1>
     <p className="text-lg text-[#8A8A85] mb-10 max-w-xl mx-auto leading-relaxed">
       A searchable, anonymous record of what people actually learned from
@@ -47,7 +47,7 @@ export default function HomeContent({ initialLessons }: { initialLessons: Lesson
     </p>
     <button
       onClick={() => setShowModal(true)}
-      className="inline-block px-7 py-3 bg-[#3D5A4C] text-white rounded-lg text-sm font-semibold cursor-pointer hover:bg-[#5C7A6A] transition-colors"
+      className="inline-block px-7 py-3 bg-[#C9860A] text-white rounded-lg text-sm font-semibold cursor-pointer hover:bg-[#DDA23D] transition-colors"
     >
       Share a lesson
     </button>
