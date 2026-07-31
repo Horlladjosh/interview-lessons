@@ -12,19 +12,19 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.onelesson.xyz'),
-  title: "OneLesson — Anonymous lessons from real interviews",
-  description: "A searchable record of what people actually learned from interviewing, one honest lesson at a time. No reviews, no salary talk, no complaints, just the specific thing they'd tell someone before walking in.",
+  title: "OneLesson — Anonymous Interview Lessons",
+  description: "A searchable record of real lessons learned from job interviews. No reviews, no salary talk, just what people wish they'd known.",
   openGraph: {
-    title: "OneLesson — Anonymous lessons from real interviews",
-    description: "A searchable record of what people actually learned from interviewing, one honest lesson at a time. No reviews, no salary talk, no complaints.",
+    title: "OneLesson — Anonymous Interview Lessons",
+    description: "Real lessons learned from job interviews, one at a time. No reviews, no salary talk.",
     images: ["/og-image.png"],
     url: "https://www.onelesson.xyz",
     siteName: "OneLesson",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OneLesson — Anonymous lessons from real interviews",
-    description: "A searchable record of what people actually learned from interviewing, one honest lesson at a time. No reviews, no salary talk.",
+    title: "OneLesson — Anonymous Interview Lessons",
+    description: "Real lessons learned from job interviews, one at a time.",
     images: ["/og-image.png"],
   },
 };
