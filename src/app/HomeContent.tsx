@@ -58,8 +58,6 @@ export default function HomeContent({ initialLessons }: { initialLessons: Lesson
         </section>
       </main>
 
-      <Footer />
-
       {showModal && (
         <SubmitModal onClose={() => { setShowModal(false); loadLessons(); }} />
       )}
