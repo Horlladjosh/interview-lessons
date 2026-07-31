@@ -10,7 +10,7 @@ export default function Footer() {
           href="https://twitter.com/horllad_josh"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs text-[#8A8A85] hover:text-[#3D5A4C] transition-colors"
+          className="text-xs text-[#8A8A85] hover:text-[#C9860A] transition-colors"
         >
           Built by Horlladjosh
         </a>

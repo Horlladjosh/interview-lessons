@@ -61,7 +61,7 @@ export default function LessonBrowser({ lessons }: { lessons: Lesson[] }) {
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
           placeholder="Search by company or keyword..."
-          className="w-full p-2.5 text-sm border border-[#E5E5E0] rounded-lg mb-4 focus:outline-none focus:border-[#3D5A4C]"
+          className="w-full p-2.5 text-sm border border-[#E5E5E0] rounded-lg mb-4 focus:outline-none focus:border-[#C9860A]"
         />
 
         <div className="mb-4">
@@ -145,7 +145,7 @@ export default function LessonBrowser({ lessons }: { lessons: Lesson[] }) {
 }
 
 const companyTagClass =
-  'text-xs text-[#3D5A4C] bg-[#3D5A4C]/[0.10] px-2.5 py-1 rounded-md uppercase tracking-wide'
+  'text-xs text-[#C9860A] bg-[#C9860A]/[0.10] px-2.5 py-1 rounded-md uppercase tracking-wide'
 
 const roleTagClass =
   'text-xs text-[#B8845C] bg-[#B8845C]/[0.10] px-2.5 py-1 rounded-md uppercase tracking-wide'

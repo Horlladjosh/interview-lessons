@@ -87,7 +87,7 @@ export default function LessonForm({ onSuccess }: { onSuccess?: () => void }) {
         onChange={(e) => setLessonText(e.target.value.slice(0, CHAR_LIMIT))}
         placeholder="What's one thing you learned from an interview?"
         rows={6}
-        className="w-full p-3 text-base border border-[#E5E5E0] rounded-lg focus:outline-none focus:border-[#3D5A4C]"
+        className="w-full p-3 text-base border border-[#E5E5E0] rounded-lg focus:outline-none focus:border-[#C9860A]"
       />
       <div className="text-right text-xs text-[#8A8A85] mb-4">
         {lessonText.length}/{CHAR_LIMIT}
@@ -108,7 +108,7 @@ export default function LessonForm({ onSuccess }: { onSuccess?: () => void }) {
           value={company}
           onChange={(e) => setCompany(e.target.value)}
           placeholder="Company name"
-          className="w-full p-3 text-base border border-[#E5E5E0] rounded-lg mb-3 focus:outline-none focus:border-[#3D5A4C]"
+          className="w-full p-3 text-base border border-[#E5E5E0] rounded-lg mb-3 focus:outline-none focus:border-[#C9860A]"
         />
       )}
 
@@ -117,13 +117,13 @@ export default function LessonForm({ onSuccess }: { onSuccess?: () => void }) {
         value={roleTag}
         onChange={(e) => setRoleTag(e.target.value)}
         placeholder="Role / industry (e.g. Product Marketing)"
-        className="w-full p-3 text-base border border-[#E5E5E0] rounded-lg mb-3 focus:outline-none focus:border-[#3D5A4C]"
+        className="w-full p-3 text-base border border-[#E5E5E0] rounded-lg mb-3 focus:outline-none focus:border-[#C9860A]"
       />
 
       <select
         value={stage}
         onChange={(e) => setStage(e.target.value)}
-        className="w-full p-3 text-base border border-[#E5E5E0] rounded-lg mb-4 bg-white focus:outline-none focus:border-[#3D5A4C]"
+        className="w-full p-3 text-base border border-[#E5E5E0] rounded-lg mb-4 bg-white focus:outline-none focus:border-[#C9860A]"
       >
         <option value="phone_screen">Phone screen</option>
         <option value="technical_round">Technical round</option>
@@ -146,7 +146,7 @@ export default function LessonForm({ onSuccess }: { onSuccess?: () => void }) {
       <button
         type="submit"
         disabled={submitting || lessonText.length === 0 || !agreedToTerms}
-        className="px-6 py-3 text-sm font-semibold rounded-lg bg-[#3D5A4C] text-white disabled:opacity-50"
+        className="px-6 py-3 text-sm font-semibold rounded-lg bg-[#C9860A] text-white disabled:opacity-50"
       >
         {submitting ? 'Submitting...' : 'Submit lesson'}
       </button>
