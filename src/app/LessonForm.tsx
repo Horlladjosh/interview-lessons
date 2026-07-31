@@ -16,6 +16,7 @@ export default function LessonForm({ onSuccess }: { onSuccess?: () => void }) {
   const [flagged, setFlagged] = useState(false)
   const [flagReason, setFlagReason] = useState('')
   const pendingSubmitRef = useRef(false)
+  const [agreedToTerms, setAgreedToTerms] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -130,10 +131,21 @@ export default function LessonForm({ onSuccess }: { onSuccess?: () => void }) {
         <option value="offer_stage">Offer stage</option>
         <option value="other">Other</option>
       </select>
-
+<label className="flex items-start gap-2 text-xs text-[#8A8A85] mb-4">
+  <input
+    type="checkbox"
+    checked={agreedToTerms}
+    onChange={(e) => setAgreedToTerms(e.target.checked)}
+    className="mt-0.5"
+  />
+  <span>
+    This reflects my own experience, and I haven&apos;t included confidential
+    material, proprietary questions, or anyone&apos;s name.
+  </span>
+</label>
       <button
         type="submit"
-        disabled={submitting || lessonText.length === 0}
+        disabled={submitting || lessonText.length === 0 || !agreedToTerms}
         className="px-6 py-3 text-sm font-semibold rounded-lg bg-[#3D5A4C] text-white disabled:opacity-50"
       >
         {submitting ? 'Submitting...' : 'Submit lesson'}

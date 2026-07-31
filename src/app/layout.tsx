@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import Header from './Header';
+import Footer from './Footer'
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Header />
         {children}
+         <Footer />
         <Analytics />
       </body>
     </html>

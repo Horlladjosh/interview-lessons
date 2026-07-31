@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import LessonBrowser from './LessonBrowser'
-import Footer from './Footer'
 import SubmitModal from './SubmitModal'
 
 type Lesson = {

@@ -11,6 +11,7 @@ Flag the post if it does ANY of the following:
 - Reads as pure venting/complaining, with no reflection or lesson
 - Accuses a specific company of wrongdoing
 - Accuses a specific person of wrongdoing
+- Reproduces a specific interview question, case study, or technical problem in detailed, verbatim-like form, rather than describing the lesson learned from it
 
 Respond ONLY with valid JSON, no other text, in this exact format:
 {"flagged": true or false, "reason": "short specific reason if flagged, empty string if not"}
