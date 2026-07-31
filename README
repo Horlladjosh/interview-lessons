@@ -1,0 +1,19 @@
+# OneLesson
+
+Anonymous, searchable lessons learned from real job interviews. No reviews,
+no salary talk, just the specific thing someone wishes they'd known before
+walking in.
+
+Live at [onelesson.xyz](https://www.onelesson.xyz)
+
+## Stack
+- Next.js
+- Supabase
+- Google Gemini API (content moderation)
+- Vercel
+
+## Author
+Built and maintained by Joshua Adegbite ([@Horlladjosh](https://twitter.com/horllad_josh)).
+
+## License
+All rights reserved. See [LICENSE](./LICENSE) for details.
