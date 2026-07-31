@@ -52,14 +52,24 @@ export default function AdminPage() {
   }, [authed])
 
   const handleApprove = async (id: string) => {
-    await supabase.from('lessons').update({ status: 'published' }).eq('id', id)
-    setLessons((prev) => prev.filter((l) => l.id !== id))
+  const { error } = await supabase.from('lessons').update({ status: 'published' }).eq('id', id)
+  if (error) {
+    console.error('Failed to approve:', error.message)
+    alert('Failed to approve: ' + error.message)
+    return
   }
+  setLessons((prev) => prev.filter((l) => l.id !== id))
+}
 
   const handleRemove = async (id: string) => {
-    await supabase.from('lessons').update({ status: 'removed' }).eq('id', id)
-    setLessons((prev) => prev.filter((l) => l.id !== id))
+  const { error } = await supabase.from('lessons').update({ status: 'removed' }).eq('id', id)
+  if (error) {
+    console.error('Failed to remove:', error.message)
+    alert('Failed to remove: ' + error.message)
+    return
   }
+  setLessons((prev) => prev.filter((l) => l.id !== id))
+}
 
   if (!authed) {
     return (
