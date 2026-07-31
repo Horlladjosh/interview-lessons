@@ -11,8 +11,22 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "OneLesson",
-  description: "Anonymous, searchable lessons from real interviews.",
+  metadataBase: new URL('https://www.onelesson.xyz'),
+  title: "OneLesson — Anonymous lessons from real interviews",
+  description: "A searchable record of what people actually learned from interviewing, one honest lesson at a time. No reviews, no salary talk, no complaints, just the specific thing they'd tell someone before walking in.",
+  openGraph: {
+    title: "OneLesson — Anonymous lessons from real interviews",
+    description: "A searchable record of what people actually learned from interviewing, one honest lesson at a time. No reviews, no salary talk, no complaints.",
+    images: ["/og-image.png"],
+    url: "https://www.onelesson.xyz",
+    siteName: "OneLesson",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "OneLesson — Anonymous lessons from real interviews",
+    description: "A searchable record of what people actually learned from interviewing, one honest lesson at a time. No reviews, no salary talk.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
