@@ -4,6 +4,7 @@ import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import Header from './Header';
 import Footer from './Footer'
+import ScrollProgress from './ScrollProgress'
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -40,6 +41,7 @@ export default function RootLayout({
       className={`${outfit.variable} min-h-full flex flex-col`}
     >
       <body className="min-h-full flex flex-col">
+        <ScrollProgress />
         <Header />
         {children}
          <Footer />

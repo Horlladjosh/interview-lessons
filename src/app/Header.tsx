@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="border-b border-[#E5E5E0]">
+      <header className="border-b border-[#E5E5E0] sticky top-0 bg-white z-40">
         <div className="max-w-[1400px] mx-auto px-6 py-3 flex items-center justify-between">
           <Link href="/" className="text-base font-bold text-[#1A1A1A] no-underline">
             OneLesson

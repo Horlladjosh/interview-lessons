@@ -121,16 +121,16 @@ export default function LessonForm({ onSuccess }: { onSuccess?: () => void }) {
       />
 
       <select
-        value={stage}
-        onChange={(e) => setStage(e.target.value)}
-        className="w-full p-3 text-base border border-[#E5E5E0] rounded-lg mb-4 bg-white focus:outline-none focus:border-[#C9860A]"
-      >
-        <option value="phone_screen">Phone screen</option>
-        <option value="technical_round">Technical round</option>
-        <option value="final_onsite">Final / onsite</option>
-        <option value="offer_stage">Offer stage</option>
-        <option value="other">Other</option>
-      </select>
+  value={stage}
+  onChange={(e) => setStage(e.target.value)}
+  className="w-full p-3 text-base border border-[#E5E5E0] rounded-lg mb-4 bg-white focus:outline-none focus:border-[#C9860A]"
+>
+  <option value="phone_screen">Intro call</option>
+  <option value="technical_round">Technical interview</option>
+  <option value="final_onsite">Final round</option>
+  <option value="offer_stage">Offer stage</option>
+  <option value="other">Other</option>
+</select>
 <label className="flex items-start gap-2 text-xs text-[#8A8A85] mb-4">
   <input
     type="checkbox"

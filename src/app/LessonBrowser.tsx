@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react'
 import LikeButton from './LikeButton'
 import { slugify } from '@/lib/slugify'
 import Dropdown from './Dropdown'
+import { STAGE_LABELS } from '@/lib/stages'
 
 type Lesson = {
   id: string
@@ -83,14 +84,15 @@ export default function LessonBrowser({ lessons }: { lessons: Lesson[] }) {
           <label className="block text-xs font-semibold uppercase tracking-wide text-[#1A1A1A] mb-1.5">
             Stage
           </label>
-          <Dropdown
+
+<Dropdown
   value={stageFilter}
   onChange={setStageFilter}
   options={[
     { value: '', label: 'All stages' },
-    { value: 'phone_screen', label: 'Phone screen' },
-    { value: 'technical_round', label: 'Technical round' },
-    { value: 'final_onsite', label: 'Final / onsite' },
+    { value: 'phone_screen', label: 'Intro call' },
+    { value: 'technical_round', label: 'Technical interview' },
+    { value: 'final_onsite', label: 'Final round' },
     { value: 'offer_stage', label: 'Offer stage' },
     { value: 'other', label: 'Other' },
   ]}
@@ -130,7 +132,7 @@ export default function LessonBrowser({ lessons }: { lessons: Lesson[] }) {
   {lesson.role_industry_tag && (
     <span className={roleTagClass}>{lesson.role_industry_tag}</span>
   )}
-  <span className={stageTagClass}>{lesson.interview_stage.replace('_', ' ')}</span>
+  <span className={stageTagClass}>{STAGE_LABELS[lesson.interview_stage] || lesson.interview_stage}</span>
 </div>
               <p className="text-base leading-relaxed text-[#1A1A1A]">{lesson.lesson_text}</p>
               <div className="mt-3">

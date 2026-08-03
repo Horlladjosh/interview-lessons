@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import LessonBrowser from './LessonBrowser'
 import SubmitModal from './SubmitModal'
+import FloatingShareButton from './FloatingShareButton'
 
 type Lesson = {
   id: string
@@ -57,7 +58,7 @@ export default function HomeContent({ initialLessons }: { initialLessons: Lesson
           <LessonBrowser lessons={lessons} />
         </section>
       </main>
-
+      <FloatingShareButton onClick={() => setShowModal(true)} />
       {showModal && (
         <SubmitModal onClose={() => { setShowModal(false); loadLessons(); }} />
       )}
